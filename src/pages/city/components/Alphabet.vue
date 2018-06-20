@@ -1,16 +1,19 @@
 <template>
   <div class="dd">
-    <ul class="list">
-      <li class="item">A</li>
-      <li class="item">B</li>
-      <li class="item">C</li>
+    <ul class="list" >
+      <li class="item" v-for="(item, key) of cities" :key="key">
+        {{key}}
+      </li>
     </ul>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'CityHeader'
+  name: 'CityAlphabet',
+  props: {
+    cities: Object
+  }
 }
 </script>
 
